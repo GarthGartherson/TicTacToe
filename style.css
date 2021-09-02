@@ -1,0 +1,54 @@
+
+
+.container {
+    width: 40%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 33% [col-start]);
+    grid-template-rows: 100px 40px repeat(3, 25% [row-start]);
+    height: 95vh;
+    grid-template-areas: 
+        "header header header"
+        "play - reset"
+        "box-1 box-2 box-3"
+        "box-4 box-5 box-6"
+        "box-7 box-8 box-9"
+
+    ;
+    text-align: center;
+    gap: 1px;
+    min-width: 450px;
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+}
+
+.player_name-container-1 {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.player_name-container-2 {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    font-size: 2rem;
+}
+
+.button_play {
+    grid-area: play;
+}
+
+.button_reset {
+    grid-area: reset;
+}
